@@ -35,9 +35,6 @@ void execute() {
     o seu preço é $precoProduto, 
     compramos $quantidadeProduto unidades''');
 
-
-
-
   /**
   a partir da versão 2.12 do dart as variávies por padrão são Null Safety - não anuláveis por padrão
   nomeProduto = null; >>>> gera erro
@@ -45,6 +42,4 @@ void execute() {
   
   //para declarar uma variável que pode ser nula adicionaos "?" logo após o tipo
   String? nome = null;
-  
-  
 }

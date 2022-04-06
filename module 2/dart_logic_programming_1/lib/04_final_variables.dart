@@ -48,3 +48,8 @@ void execute() {
     produto 2: $nomeProduto2 $descricaoProduto2
   ''');
 }
+
+/*
+  >>>Exercícios
+  Crie um novo arquivo e definina variáveis para Curso, Aluno e Disciplina.
+*/

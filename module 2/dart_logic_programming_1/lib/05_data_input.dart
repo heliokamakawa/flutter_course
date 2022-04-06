@@ -24,3 +24,10 @@ void execute() {
   print('o nome digitado foi $descricaoProduto');     //imprimindo o resultado
   
 }
+
+/** 
+>>>> REGRA PARA TODOS: não pode solicitar valores calculados
+solicitar os dados de um curso. Imprima o nome do curso a carga horária do Curso, quantidade de série, % mínimo de presença, a quantidade máixima de faltas e a média para a aprovação do curso.
+solicitar os dados de um aluno. Imprima o nome, RA, a série atual e idade.
+solicitar os dados de uma disciplina. Imprima o nome da discplina, a carga horária da disciplina, % mínimo de presença e a quantidade mínima de presença.
+*/

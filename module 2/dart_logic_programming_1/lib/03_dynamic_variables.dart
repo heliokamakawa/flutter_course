@@ -16,3 +16,4 @@ void execute() {
   produto = true;                         //agora é um booleano
   print('disponível: $produto');
 }
+
