@@ -1,6 +1,6 @@
 void execute() {
   print('sample dynamic variables');
-  //para definir uma variável com inferência de tipo: var nome_variável = atribuição;
+  //para definir uma variável de tipo dinânimco: dynamic nome_variável = atribuição;
   dynamic produto = "Ferrero Rocher";     //é uma String
   print('nome: $produto');
 
