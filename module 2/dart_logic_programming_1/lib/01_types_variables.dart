@@ -1,6 +1,14 @@
 void execute() {
   print('sample type variables');
-  //para definir uma variável com tipo explícito: tipo nome_variável = atribuição;
+  /*
+  Variável é um espaço na memória que reservamos para armazenar um dado 
+  Um valor que pode "variar", hora é um valor, hora é outro - é por isto que chamamos de variável.
+  
+  Sintaxe para definir uma variável com tipo explícito: 
+  tipo nome_variável = atribuição;
+  
+  Tipos existentes: String (conjunto de caracteres), char (caractere), double (números com casas decimais), int (números inteiros), bool (valor booleano)
+  */
   String nomeProduto = 'Prestígio';
   String descricaoProduto = 'chocolate';
   double precoProduto = 27.2;
@@ -14,7 +22,7 @@ void execute() {
   */
 
   //podemos atribuir outros valores
-  nomeProduto = 'Ferrero Rocher';
+  nomeProduto = 'Ferrero Rocher'; //veja que não tem o tipo antes do nome da variável, só estamos atribuindo um novo valor
 
   //imprimindo com concatenação
   print('o produto '+nomeProduto+' é um '+descricaoProduto); 
