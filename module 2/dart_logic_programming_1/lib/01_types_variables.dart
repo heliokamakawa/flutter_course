@@ -9,15 +9,18 @@ void execute() {
   
   Tipos existentes: String (conjunto de caracteres), char (caractere), double (números com casas decimais), int (números inteiros), bool (valor booleano)
   */
-  String nomeProduto = 'Prestígio';
-  String descricaoProduto = 'chocolate';
-  double precoProduto = 27.2;
-  int quantidadeProduto = 3;
-  double total = precoProduto * quantidadeProduto;
-  bool produtoDisponivel = true; //só pode ser true ou false
+  
+  //definindo variáveis
+  String nomeProduto = 'Prestígio';                 //conjunto de caracteres
+  String descricaoProduto = 'chocolate';            //conjunto de caracteres
+  double precoProduto = 27.2;                       //números com casas decimais
+  int quantidadeProduto = 3;                        //números inteiros
+  bool produtoDisponivel = true;                    //booleano - só pode ser true ou false
+  
+  double total = precoProduto * quantidadeProduto;  //na declaração podemos fazer atribuição com operações envolvendo outras variáveis
 
   /*
-  → não podemos declarar duas variáveis com o mesmo nome
+  → não podemos declarar mais de uma variável com o mesmo nome
   String nomeProduto = 'Chokito'; >>>> gera erro
   */
 
