@@ -1,0 +1,7 @@
+Pense em um estudo de caso único - diferente dos colegas 
+
+Elabore: 
+1) Duas funções sem retorno e sem parâmetro; 
+2) Duas funções sem retorno e com parâmetro; 
+3) Duas funções com retorno e sem parâmetro; e 
+4) Duas funções com retorno e com parâmetro.
