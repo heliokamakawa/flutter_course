@@ -1,4 +1,4 @@
-import 'package:dart_function/a_dart_function.dart' as dart_function;
+import 'package:dart_function/a_function.dart' as dart_function;
 import 'package:dart_function/b_function_without_return_arg.dart' as function_without_return_arg;
 import 'package:dart_function/c_function_without_return_with_arg.dart' as function_without_return_with_arg;
 import 'package:dart_function/d_function_with_return_without_arg.dart' as function_with_return_without_arg;
