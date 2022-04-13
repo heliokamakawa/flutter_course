@@ -39,14 +39,4 @@ void verificarAprovacao(double nota1, double nota2){
 Responda:
 A nota1 da função show é o mesmo do parâmetro de calcularMedia? 
 Se mudarmos o nome da variável nota1 da função show para valor1, será necessário também mudar o nome do parâmetro em calcularMedia?
-
-Atividade I
-→ descontar - receber salario e o valor do desconto. Realizar o cálculo e informar se o total é positivo.
-*/
-
-/*
-Atividade II
-Pensar em um projeto único 
-Fazer um exemplo seu
-Fazer comentários de tudo que entendeu
 */
