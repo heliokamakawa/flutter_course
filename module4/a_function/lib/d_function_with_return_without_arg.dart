@@ -35,15 +35,3 @@ String verificarAprovacao(){
     return 'reprovado';
   }
 }
-
-/*
-Atividade I
-→ descontar - receber salario e o valor do desconto. Realizar o cálculo e informar se o total é positivo.
-*/
-
-/*
-Atividade II
-Pensar em um projeto único 
-Fazer um exemplo seu
-Fazer comentários de tudo que entendeu
-*/
