@@ -14,18 +14,21 @@ void show() {
 
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
+  
+  dynamic resultado = 0;
 
   if(escolha == 1){
-    interfaceNotas(n1, n2, () => ( ((n1 + n2) / 2) > 6) ? 'aprovado' : 'reprovado' );
+    resultado = interfaceNotas(n1, n2, () => ( ((n1 + n2) / 2) > 6) ? 'aprovado' : 'reprovado' );
   }else if(escolha == 2){
-    interfaceNotas(n1, n2, () => (n1 > n2) ? n1 : n2);
+    resultado = interfaceNotas(n1, n2, () => (n1 > n2) ? n1 : n2);
   } else {
-    interfaceNotas( n1, n2, () => (n1 + n2) / 2 );
+    resultado = interfaceNotas( n1, n2, () => (n1 + n2) / 2 );
   }
+  print(resultado);
 }
 
-void interfaceNotas(double nota1, double nota2, Function acao){
-    acao(nota1,nota2);
+String interfaceNotas(double nota1, double nota2, Function acao){
+    return acao(nota1,nota2);
 }
 
 /*
