@@ -14,9 +14,11 @@ void show() {
 
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
+  
+  var resultado = '';
 
   if(escolha == 1){
-    interfaceNotas(n1, n2, (){
+    resultado = interfaceNotas(n1, n2, (){
       double media = (n1 + n2) / 2;
 
       if(media > 6){
@@ -26,27 +28,28 @@ void show() {
       }
     });
   }else if(escolha == 2){
-    interfaceNotas(n1, n2, (){
+    resultado = interfaceNotas(n1, n2, (){
       double media = (n1 + n2) / 2;
       if(n1 == n2){
         return n1;
       } else if(n1 > n2){
         return n1;
       }else{
-        return n2;
+        return 'a maior nota é $n2';
       }
     }
     );
   } else {
-    interfaceNotas(n1, n2, () {
-      return (n1 + n2) / 2;
+    resultado = interfaceNotas(n1, n2, () {
+      return 'A média é ${(n1 + n2) / 2}';
     }
     );
   }
+  print(resultado);
 }
 
-void interfaceNotas(double nota1, double nota2, Function acao){
-    acao(nota1,nota2);
+String interfaceNotas(double nota1, double nota2, Function acao){
+    return acao(nota1,nota2);
 }
 
 /*
