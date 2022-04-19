@@ -16,14 +16,15 @@ void show() {
   double n2 = double.parse(stdin.readLineSync()!);
 
   
-
+  String resultado = '';
   if(escolha == 1){
-    interfaceNotas(n1, n2, verificarAprovacao);
+    resultado = interfaceNotas(n1, n2, verificarAprovacao);
   }else if(escolha == 2){
-    interfaceNotas(n1, n2, verificarMaiorNota);
+    resultado = interfaceNotas(n1, n2, verificarMaiorNota);
   } else {
-    interfaceNotas(n1, n2, calcularMedia);
+    resultado = interfaceNotas(n1, n2, calcularMedia);
   }
+  print(resultado);
 }
 
 void interfaceNotas(double nota1, double nota2, Function acao){
