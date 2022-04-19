@@ -15,19 +15,19 @@ void show() {
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
 
-  interfaceNotas(escolha, n1, n2);
+  print(interfaceNotas(escolha, n1, n2));
 }
 
-void interfaceNotas(int escolha, double nota1, double nota2){
+String interfaceNotas(int escolha, double nota1, double nota2){
     if(escolha == 1){
       var resultado = verificarAprovacao(nota1, nota2);
-      print('o alunos está $resultado');
+      return 'o alunos está $resultado';
     }else if(escolha == 2){
       var maior = verificarMaiorNota(nota1, nota2);
-      print('a maior nota é $maior');
+      return 'a maior nota é $maior';
     } else {
       var media = calcularMedia(nota1, nota2);
-      print('A média é $media.');
+      return 'A média é $media.';
     }
 
 }
