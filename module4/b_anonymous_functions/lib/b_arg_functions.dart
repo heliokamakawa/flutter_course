@@ -27,8 +27,8 @@ void show() {
   print(resultado);
 }
 
-void interfaceNotas(double nota1, double nota2, Function acao){
-    acao(nota1,nota2);
+String interfaceNotas(double nota1, double nota2, Function acao){
+    return acao(nota1,nota2);
 }
 
 String verificarAprovacao(double nota1, double nota2){
