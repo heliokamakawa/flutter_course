@@ -8,13 +8,10 @@ void show() {
     (3) - calcular a média.
   ''');
   int escolha = int.parse(stdin.readLineSync()!);
-
   print('Informe a 1º nota:');
   double n1 = double.parse(stdin.readLineSync()!);
-
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-
   print(interfaceNotas(escolha, n1, n2));
 }
 
@@ -29,12 +26,10 @@ String interfaceNotas(int escolha, double nota1, double nota2){
       var media = calcularMedia(nota1, nota2);
       return 'A média é $media.';
     }
-
 }
 
 String verificarAprovacao(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
-
   if(media > 6){
     return 'aprovado';
   }else{
@@ -44,7 +39,6 @@ String verificarAprovacao(double nota1, double nota2){
 
 double verificarMaiorNota(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
-
   if(nota1 == nota2){
     return nota1;
   } else if(nota1 > nota2){
@@ -60,11 +54,11 @@ double calcularMedia(double nota1, double nota2){
 
 
 /*
-Atividade I
-→ interfaceSalario 
-→ bonificar - receber salario e o valor do bônus. Realizar o cálculo e informar se o total é maior que o salário mínimo.
-→ descontar - receber salario e o valor do desconto. Realizar o cálculo e informar se o total é positivo.
-→ comparar - receber dois salario. Retornar o maior salário.
+Atividade I - Defina 3 funções do mesmo contexto e uma interface para estas funções
+→ Interface Salario 
+→ Receber salario e um valor. Bonificar o valor no salário e informar se o total é maior que o salário mínimo.
+→ Receber salario e um valor. Descontar o valor no salário e informar se ainda resta salário a receber.
+→ Receber salario e um valor. Calcular e informar o % que o valor da comissão representa em relação ao salário.
 */
 
 /*
