@@ -1,6 +1,57 @@
 import 'dart:io';
 
-void show() {
+/*
+>>> Contexto de Aplicação <<<
+Atende de aprender a respeito de funções anônimas,
+é importante entender onde e quando podemos utilizar este recurso
+*/
+
+
+
+/*
+definindo uma função que verifica a aprovação em 3 situações
+→ pela media
+→ pela maior nota
+→ pela menor nota
+*/
+String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
+  if(escolha == 1){
+    double media = (nota1 + nota2) / 2;
+    if(media >= 6){
+      return 'aprovado';
+    }else{
+      return 'reprovado';
+    }
+  }else if(escolha == 2){
+      double maior = nota1;
+      if(nota2 > nota1){
+        maior = nota2;
+      } 
+      if(media >= 6){
+        return 'aprovado';
+      }else{
+        return 'reprovado';
+      }
+    } else {
+      double menor = nota1;
+      if(nota2 < nota1){
+        maior = nota2;
+      } 
+      if(media >= 6){
+        return 'aprovado';
+      }else{
+        return 'reprovado';
+      }
+    }
+}
+/*
+Para definir uma função devemos tomar cuidado com 
+a quantidade de linhas
+a unidade lógica 
+e na modularização
+*/
+
+void show() { 
   print('''
     Escolha uma opção: 
     (1) - varificar a aprovação;
