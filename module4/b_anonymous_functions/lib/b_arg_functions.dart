@@ -8,15 +8,11 @@ void show() {
     (3) - calcular a média.
   ''');
   int escolha = int.parse(stdin.readLineSync()!);
-
   print('Informe a 1º nota:');
   double n1 = double.parse(stdin.readLineSync()!);
-
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-
-  
-  String resultado = '';
+  var resultado = '';
   if(escolha == 1){
     resultado = interfaceNotas(n1, n2, aprovacaoMedia);
   }else if(escolha == 2){
