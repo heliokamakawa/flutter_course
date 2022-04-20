@@ -8,15 +8,11 @@ void show() { //exemplo arrow function
     (3) - calcular a média.
   ''');
   int escolha = int.parse(stdin.readLineSync()!);
-
   print('Informe a 1º nota:');
   double n1 = double.parse(stdin.readLineSync()!);
-
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-  
   var resultado = '';
-
   if(escolha == 1){
     resultado = verificarAprovacao(n1, n2, () => ( ((n1 + n2) / 2) >= 6) ? 'aprovado' : 'reprovado' );
   }else if(escolha == 2){
