@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void show() {
+void show() { //anonymous functions
   print('''
     Escolha uma opção: 
     (1) - varificar a aprovação;
@@ -20,7 +20,7 @@ void show() {
   if(escolha == 1){
     resultado = verificarAprovacao(n1, n2, (){
       double media = (n1 + n2) / 2;
-      if(media > 6){
+      if(media >= 6){
         return 'aprovado';
       }else{
         return 'reprovado';
@@ -28,11 +28,11 @@ void show() {
     });
   }else if(escolha == 2){
     resultado = verificarAprovacao(n1, n2, (){
-      double maior = nota1;
-      if(nota2 > nota1){
-        maior = nota2;
+      double maior = n1;
+      if(n2 > n1){
+        maior = n2;
       } 
-      if(media >= 6){
+      if(maior >= 6){
         return 'aprovado';
       }else{
         return 'reprovado';
@@ -40,11 +40,11 @@ void show() {
     });
   } else {
     resultado = verificarAprovacao(n1, n2, () {
-      double menor = nota1;
-      if(nota2 < nota1){
-        maior = nota2;
+      double menor = n1;
+      if(n2 < n1){
+        menor = n2;
       } 
-      if(media >= 6){
+      if(menor >= 6){
         return 'aprovado';
       }else{
         return 'reprovado';
