@@ -12,53 +12,59 @@ void show() {
   double n1 = double.parse(stdin.readLineSync()!);
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-  print(interfaceNotas(escolha, n1, n2));
+  print(verificarAprovacao(escolha, n1, n2));
 }
 
-String interfaceNotas(int escolha, double nota1, double nota2){
-    if(escolha == 1){
-      var resultado = verificarAprovacao(nota1, nota2);
-      return 'o alunos está $resultado';
+String verificarAprovacao(int escolha, double nota1, double nota2){
+  if(escolha == 1){
+      return  aprovacaoMedia(nota1, nota2);
     }else if(escolha == 2){
-      var maior = verificarMaiorNota(nota1, nota2);
-      return 'a maior nota é $maior';
+      return aprovacaoMaiorNota(nota1, nota2);
     } else {
-      var media = calcularMedia(nota1, nota2);
-      return 'A média é $media.';
+      return aprovacaoMenorNota(nota1, nota2);
     }
 }
 
-String verificarAprovacao(double nota1, double nota2){
+String aprovacaoMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
-  if(media > 6){
+  if(media >= 6){
     return 'aprovado';
   }else{
     return 'reprovado';
   }
 }
 
-double verificarMaiorNota(double nota1, double nota2){
-  double media = (nota1 + nota2) / 2;
-  if(nota1 == nota2){
-    return nota1;
-  } else if(nota1 > nota2){
-    return nota1;
+String aprovacaoMaiorNota(double nota1, double nota2){
+  double maior = nota1;
+  if(nota2 > nota1){
+    maior = nota2;
+  } 
+  if(media >= 6){
+    return 'aprovado';
   }else{
-    return nota2;
+    return 'reprovado';
   }
 }
 
-double calcularMedia(double nota1, double nota2){
-  return (nota1 + nota2) / 2;
+double aprovacaoMenorNota(double nota1, double nota2){
+  double menor = nota1;
+  if(nota2 < nota1){
+    maior = nota2;
+  } 
+  if(media >= 6){
+    return 'aprovado';
+  }else{
+    return 'reprovado';
+  }
 }
 
 
 /*
 Atividade I - Defina 3 funções do mesmo contexto e uma interface para estas funções
 → Interface Salario 
-→ Receber salario e um valor. Bonificar o valor no salário e informar se o total é maior que o salário mínimo.
-→ Receber salario e um valor. Descontar o valor no salário e informar se ainda resta salário a receber.
-→ Receber salario e um valor. Calcular e informar o % que o valor da comissão representa em relação ao salário.
+→ Receber salario e um valor. Bonificar o valor no salário e informar o % adicioando em relação ao salário.
+→ Receber salario e um valor. Descontar o valor no salário e informar o % descontado em relação ao salário.
+→ Receber salario e um valor. Informar o % que o valor da comissão representa em relação ao salário.
 */
 
 /*
