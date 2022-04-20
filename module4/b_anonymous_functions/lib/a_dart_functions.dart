@@ -6,8 +6,6 @@ Atende de aprender a respeito de funções anônimas,
 é importante entender onde e quando podemos utilizar este recurso
 */
 
-
-
 /*
 definindo uma função que verifica a aprovação em 3 situações
 → pela media
