@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void execute() {
+void main(List<String> arguments) {
   print('sample data conversion');
 
 

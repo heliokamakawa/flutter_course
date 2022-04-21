@@ -1,4 +1,4 @@
-void execute() {
+void main(List<String> arguments) {
   print('sample dynamic variables');
   //para definir uma variável de tipo dinânimco: dynamic nome_variável = atribuição;
   dynamic produto = "Ferrero Rocher";     //é uma String

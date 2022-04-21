@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void execute() {
+void main(List<String> arguments) {
   print('sample data input');
   /*
     para fazer a entrada de dados é necessário fazer a importação 'dart:io'

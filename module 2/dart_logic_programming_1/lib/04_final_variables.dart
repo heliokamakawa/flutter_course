@@ -1,5 +1,5 @@
 
-void execute() {
+void main(List<String> arguments) {
   print('sample const/final variables');
   /*
     const/final 

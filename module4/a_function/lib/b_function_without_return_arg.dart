@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void show(){
+void main(List<String> arguments) {
  
   print('\n***exemplo de função sem retorno e sem parâmetro***');
    /*

@@ -1,4 +1,4 @@
-void show(){
+void main(List<String> arguments) {
   print('''
   obs: para executar este código: 
   (1) tem que ter a extensão Code Runner; 

@@ -2,16 +2,23 @@ import 'dart:io';
 
 /*
 >>> Contexto de Aplicação <<<
-Atende de aprender a respeito de funções anônimas,
+Antes de aprender a respeito de funções anônimas,
 é importante entender onde e quando podemos utilizar este recurso
-*/
 
-/*
-definindo uma função que verifica a aprovação em 3 situações
+Funções Anônimas são úteis em circunstâncias em que é necessário uma função 
+que precisa de dados (variáveis/dinâmicos) e ações (variável/dinâmico) para realizar a função
+
+Exemplo:
+Um contexto em que precisamos de uma função para verificar a aprovação meidante 2 notas. 
+Porém, cada professor tem uma forma de realizar.
+
+Uma função que verifica a aprovação em 3 situações:
 → pela media
 → pela maior nota
 → pela menor nota
+obs: poderia ter várias outras formas
 */
+
 String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
   if(escolha == 1){
     double media = (nota1 + nota2) / 2;
@@ -25,7 +32,7 @@ String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
       if(nota2 > nota1){
         maior = nota2;
       } 
-      if(media >= 6){
+      if(maior >= 6){
         return 'aprovado';
       }else{
         return 'reprovado';
@@ -33,23 +40,23 @@ String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
     } else {
       double menor = nota1;
       if(nota2 < nota1){
-        maior = nota2;
+        menor = nota2;
       } 
-      if(media >= 6){
+      if(menor >= 6){
         return 'aprovado';
       }else{
         return 'reprovado';
       }
     }
 }
+
+
 /*
-Para definir uma função devemos tomar cuidado com 
-a quantidade de linhas
-a unidade lógica 
-e na modularização
+Defir tudo em uma única função pode torná-la difícil de dar manutenção.
+Devemos tomar cuidado com: (1) a quantidade de linhas; (2)a unidade lógica; e (3)na modularização.
 */
 
-void show() { 
+void main(List<String> arguments)  { 
   print('''
     Escolha uma opção: 
     (1) - varificar a aprovação;
@@ -88,19 +95,19 @@ String aprovacaoMaiorNota(double nota1, double nota2){
   if(nota2 > nota1){
     maior = nota2;
   } 
-  if(media >= 6){
+  if(maior >= 6){
     return 'aprovado';
   }else{
     return 'reprovado';
   }
 }
 
-double aprovacaoMenorNota(double nota1, double nota2){
+String aprovacaoMenorNota(double nota1, double nota2){
   double menor = nota1;
   if(nota2 < nota1){
-    maior = nota2;
+    menor = nota2;
   } 
-  if(media >= 6){
+  if(menor >= 6){
     return 'aprovado';
   }else{
     return 'reprovado';
@@ -109,15 +116,18 @@ double aprovacaoMenorNota(double nota1, double nota2){
 
 
 /*
-Atividade I - Defina 3 funções do mesmo contexto e uma interface para estas funções
-→ Interface Salario 
-→ Receber salario e um valor. Bonificar o valor no salário e informar o % adicioando em relação ao salário.
-→ Receber salario e um valor. Descontar o valor no salário e informar o % descontado em relação ao salário.
-→ Receber salario e um valor. Informar o % que o valor da comissão representa em relação ao salário.
-*/
+Atividade I
+Conseguiu entender o contexto? Explique.
 
-/*
-Atividade II
+Atividade II - Defina 3 funções do mesmo contexto e um menu para estas funções
+Nesta prática, eu já estou definindo o contexto. Assim, o objetivo é você entender e treinar a sintaxe.
+→ Receber salario e um valor. Adicionar o valor no salário e informar o % adicioando em relação ao salário.
+→ Receber salario e um valor. Descontar o valor no salário e informar o % descontado em relação ao salário.
+→ Receber salario e um valor. Neste caso o valor é o bônus que tem encargo de 10%. Adicionar o bônus (já com o desconto do encargo) no salário e informar o % adicioando em relação ao salário.
+→ Menu para acesso das funções
+
+Atividade III
+Nesta atividade, o objetivo é fazer com que você entenda o contexto.
 Pensar em um projeto único 
 Fazer um exemplo seu
 Fazer comentários de tudo que entendeu

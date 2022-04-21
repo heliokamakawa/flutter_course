@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void show(){
+void main(List<String> arguments) {
   print('\n***exemplo de função com retorno e com parâmetro***');
   /*
   muito versáteis, são definidas para definir vários módulos do sistema 

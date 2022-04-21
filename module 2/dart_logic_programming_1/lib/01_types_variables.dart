@@ -1,4 +1,4 @@
-void execute() {
+void main(List<String> arguments) {
   print('sample type variables');
   /*
   Variável é um espaço na memória que reservamos para armazenar um dado 

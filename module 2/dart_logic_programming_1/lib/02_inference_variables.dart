@@ -1,4 +1,4 @@
-void execute() {
+void main(List<String> arguments) {
   print('sample inference variables');
   //para definir uma variável com inferência de tipo: var nome_variável = atribuição;
   var nomeProduto = "Ferrero Rocher";     //é uma String
