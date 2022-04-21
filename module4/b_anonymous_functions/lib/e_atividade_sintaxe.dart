@@ -73,7 +73,7 @@ void exeUm(String nomeCurso, double cargaHorariaCurso, Function(String nomeProfe
     //imprimir todos os parâmetros
 }
 
-// exercício 02 - crie a o objeto aluno na definição do parâmetro
+// exercício 02 - crie o objeto aluno na definição do parâmetro
 class Aluno{
   int? ra;
   String? nome;
