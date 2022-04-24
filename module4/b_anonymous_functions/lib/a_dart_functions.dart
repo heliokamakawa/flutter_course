@@ -9,10 +9,10 @@ Funções Anônimas são úteis em circunstâncias em que é necessário uma fun
 que precisa de dados (variáveis/dinâmicos) e ações (variável/dinâmico) para realizar a função
 
 Exemplo:
-Um contexto em que precisamos de uma função para verificar a aprovação meidante 2 notas. 
-Porém, cada professor tem uma forma de realizar.
+Um contexto em que precisamos de uma função para verificar a aprovação mediante 2 notas. 
+Porém, é muito comum que haja situações em que cada professor tem uma forma de considerar a aprovação.
 
-Uma função que verifica a aprovação em 3 situações:
+Por exemplo, vamos elaborar uma função que verifica a aprovação em 3 situações:
 → pela media
 → pela maior nota
 → pela menor nota
@@ -52,16 +52,16 @@ String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
 
 
 /*
-Defir tudo em uma única função pode torná-la difícil de dar manutenção.
-Devemos tomar cuidado com: (1) a quantidade de linhas; (2)a unidade lógica; e (3)na modularização.
+Definir tudo em uma única função pode torná-la difícil de dar manutenção.
+Devemos tomar cuidado com: (1) a quantidade de linhas; (2)a unidade lógica; e (3) na modularização.
 */
 
 void main(List<String> arguments)  { 
   print('''
     Escolha uma opção: 
-    (1) - varificar a aprovação;
-    (2) - verificar maior nota; e
-    (3) - calcular a média.
+    (1) - verificar aprovação pela média;
+    (2) - verificar aprovação pela maior nota; e
+    (3) - verificar aprovação pela menor nota.
   ''');
   int escolha = int.parse(stdin.readLineSync()!);
   print('Informe a 1º nota:');
@@ -127,7 +127,7 @@ Nesta prática, eu já estou definindo o contexto. Assim, o objetivo é você en
 → Menu para acesso das funções
 
 Atividade III
-Nesta atividade, o objetivo é fazer com que você entenda o contexto.
+Nesta atividade, o objetivo é fazer com que você elabore o contexto para que consiga aprofundar o conhecimento.
 Pensar em um projeto único 
 Fazer um exemplo seu
 Fazer comentários de tudo que entendeu
