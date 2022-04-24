@@ -22,9 +22,9 @@ Nesta parte da aula é importante que você entenda:
 void main(List<String> arguments) {
   print('''
     Escolha uma opção: 
-    (1) - varificar a aprovação;
-    (2) - verificar maior nota; e
-    (3) - calcular a média.
+    (1) - verificar aprovação pela média;
+    (2) - verificar aprovação pela maior nota; e
+    (3) - verificar aprovação pela menor nota.
   ''');
   int escolha = int.parse(stdin.readLineSync()!);
   print('Informe a 1º nota:');
