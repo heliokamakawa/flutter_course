@@ -22,7 +22,6 @@ void main(List<String> arguments) {
 //definindo uma função sem retorno e sem parâmetro
 void verificarAprovacao(){
   double nota1, nota2, media;
-
   stdout.write('1º nota: ');          //stdout.write - imprime sem a quebra de linha
   var entrada = stdin.readLineSync(); //o usuário poderá informar null
   if(entrada != null){
@@ -33,9 +32,7 @@ void verificarAprovacao(){
 
   stdout.write('2º nota: ');              
   nota2 = double.parse(stdin.readLineSync()!); //desta forma se é nulo, o cóigo não funciona
-
   media = (nota1 + nota2) / 2;
-
   if(media > 6){
     print('aprovado');
   } else {

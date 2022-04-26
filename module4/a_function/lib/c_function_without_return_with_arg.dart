@@ -10,7 +10,6 @@ void main(List<String> arguments) {
   //coletando dados
   stdout.write('1º nota: ');              
   double nota1 = double.parse(stdin.readLineSync()!); 
-
   stdout.write('2º nota: ');              
   double nota2 = double.parse(stdin.readLineSync()!); 
 
@@ -23,11 +22,9 @@ void main(List<String> arguments) {
   */
 }
 
-
 //definindo uma função sem retorno e sem parâmetro
 void verificarAprovacao(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
-  
   if(media > 6){
     print('aprovado');
   } else {

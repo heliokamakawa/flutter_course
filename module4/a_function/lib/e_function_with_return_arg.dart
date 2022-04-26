@@ -10,14 +10,12 @@ void main(List<String> arguments) {
   //coletando dados
   stdout.write('1º nota: ');              
   double nota1 = double.parse(stdin.readLineSync()!); 
-
   stdout.write('2º nota: ');              
   double nota2 = double.parse(stdin.readLineSync()!); 
 
   //chamada da função sem retorno e sem parâmetro que definimos logo abaixo...
   verificarAprovacao(nota1, nota2); 
   print('geralmente, em funções com retorno é necessário armazenar o valor e realizar a saída');
-
   var valor = verificarAprovacao(nota1, nota2); //pegando a referência da saída 
   print(valor);                                 //gerando saída
 

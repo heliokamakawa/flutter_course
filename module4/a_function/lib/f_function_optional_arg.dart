@@ -1,16 +1,12 @@
 import 'dart:io';
 
 void main(List<String> arguments) {
-  print('\n***exemplo de função com retorno e com parâmetro***');
-  /*
-  muito versáteis, são definidas para definir vários módulos do sistema 
-  Exemplo: cálculos, pool de funções, aplicação de regras de negócio, validções, outros...
-  */
+  print('\n***exemplo de função parâmetos opcionais***');
+  // Úteis quando o parâmetro em vários casos tem um valor padrão
 
   //coletando dados
   stdout.write('1º nota: ');              
   double nota1 = double.parse(stdin.readLineSync()!); 
-
   stdout.write('2º nota: ');              
   double nota2 = double.parse(stdin.readLineSync()!); 
 
@@ -30,7 +26,6 @@ void main(List<String> arguments) {
   */      
   valor = verificarAprovacaoComValorPadrao(nota1, nota2);   
   print(valor);                                           
-
 }
 
 

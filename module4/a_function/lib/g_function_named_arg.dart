@@ -1,11 +1,12 @@
 import 'dart:io';
 
 void main(List<String> arguments) {
-  print('\n***exemplo de função com retorno e com parâmetro***');
+  print('\n***exemplo de função com parâmetro nomeados***');
   /*
-  muito versáteis, são definidas para definir vários módulos do sistema 
-  Exemplo: cálculos, pool de funções, aplicação de regras de negócio, validções, outros...
+  parâmetros em que há a descrição, melhorando a legibilidade e permitindo 
+  a definição dos parâmetros em ordem aleatória
   */
+
   //coletando dados
   stdout.write('1º nota: ');              
   double nota1 = double.parse(stdin.readLineSync()!); 
@@ -93,7 +94,6 @@ String verificarAprovacaoComParametrosNomeadosEAnonimos(double nota1, {double no
   }else{
     nota =  (nota1 + nota2) / 2;
   }
-
   if(nota > media){
     return 'aprovado';
   }else{
