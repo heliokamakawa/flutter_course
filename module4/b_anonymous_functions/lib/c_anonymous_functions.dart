@@ -26,18 +26,14 @@ void main(List<String> arguments) {
   double n2 = double.parse(stdin.readLineSync()!);
   var resultado = '';
   if(escolha == 1){
-    resultado = verificarAprovacao(n1, n2, aprovacaoMedia); //definindo ação com função nomeada - uma ação que previamente era conhecido
+    //definindo ação com função nomeada - uma ação que previamente era conhecido
+    resultado = verificarAprovacao(n1, n2, aprovacaoMedia); 
   }else if(escolha == 2){
-    resultado = verificarAprovacao(n1, n2, (double nota1, double nota2){ //refazendo a função nomeada verificarMaiorNota em função anônima - somente para comparar e entender a sintaxe
+    //refazendo a função nomeada verificarMaiorNota em função anônima - somente para comparar e entender a sintaxe
+    resultado = verificarAprovacao(n1, n2, (double nota1, double nota2){ 
       double maior = nota1;
-      if(nota2 > nota1){
-        maior = nota2;
-      } 
-      if(maior >= 6){
-        return 'aprovado';
-      }else{
-        return 'reprovado';
-      }
+      if(nota2 > nota1) maior = nota2;
+      return maior;
     });
   } else {
     /*
@@ -50,52 +46,36 @@ void main(List<String> arguments) {
     resultado = verificarAprovacao(n1, n2, (){ 
       n1 = n1 * 2; // nota1 tem peso 2
       double media = (n1 + n2) / 3;
-      if(media >= 6){
-        return 'aprovado';
-      }else{
-        return 'reprovado';
-      }
+      return media;
     });
   }
   print(resultado);
 }
 
 String verificarAprovacao(double nota1, double nota2, Function acao){
-    return acao(nota1,nota2);
+    double nota = acao(nota1,nota2);
+    if(nota >= 6){
+      return 'aprovado';
+    }else{
+      return 'reprovado';
+    }
 }
 
-
-String aprovacaoMedia(double nota1, double nota2){
+double aprovacaoMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
-  if(media >= 6){
-    return 'aprovado';
-  }else{
-    return 'reprovado';
-  }
+  return media;
 }
 
-String aprovacaoMaiorNota(double nota1, double nota2){
+double aprovacaoMaiorNota(double nota1, double nota2){
   double maior = nota1;
-  if(nota2 > nota1){
-    maior = nota2;
-  } 
-  if(maior >= 6){
-    return 'aprovado';
-  }else{
-    return 'reprovado';
-  }
+  if(nota2 > nota1) maior = nota2;
+  return maior;
 }
 
-String aprovacaoMenorNota(double nota1, double nota2){
+double aprovacaoMenorNota(double nota1, double nota2){
   double menor = nota1;
-  if(nota2 < nota1){
-    menor = nota2;
-  } 
-  if(menor >= 6){
-    return 'aprovado';
-  }else{
-    return 'reprovado';
-  }
+  if(nota2 < nota1) menor = nota2;
+  return menor;
 }
 
 

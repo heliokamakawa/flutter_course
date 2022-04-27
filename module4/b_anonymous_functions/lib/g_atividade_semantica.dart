@@ -12,6 +12,6 @@ b) Função que solicite a data inicial e retorne quanto tempo passou em: (1) an
 
 c) Função que solicite a quantidade de dias trabalhadas, valor que recebe por hora e calcule o salarário para: (1) auxiliar; (2) júnior; e (3) pleno.
 
-Exercício 02 - para cada função "hospedeira", faça defina uma função anônima.
+Exercício 02 - para cada função "hospedeira", defina uma função anônima.
 */
 

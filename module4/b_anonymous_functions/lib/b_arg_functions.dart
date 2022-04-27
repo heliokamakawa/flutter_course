@@ -37,40 +37,29 @@ void main(List<String> arguments) {
 }
 
 String verificarAprovacao(double nota1, double nota2, Function acao){
-    return acao(nota1,nota2);
+    double nota = acao(nota1,nota2);
+    if(nota >= 6){
+      return 'aprovado';
+    }else{
+      return 'reprovado';
+    }
 }
 
-String aprovacaoMedia(double nota1, double nota2){
+double aprovacaoMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
-  if(media >= 6){
-    return 'aprovado';
-  }else{
-    return 'reprovado';
-  }
+  return media;
 }
 
-String aprovacaoMaiorNota(double nota1, double nota2){
+double aprovacaoMaiorNota(double nota1, double nota2){
   double maior = nota1;
-  if(nota2 > nota1){
-    maior = nota2;
-  } 
-  if(maior >= 6){
-    return 'aprovado';
-  }else{
-    return 'reprovado';
-  }
+  if(nota2 > nota1) maior = nota2;
+  return maior;
 }
 
-String aprovacaoMenorNota(double nota1, double nota2){
+double aprovacaoMenorNota(double nota1, double nota2){
   double menor = nota1;
-  if(nota2 < nota1){
-    menor = nota2;
-  } 
-  if(menor >= 6){
-    return 'aprovado';
-  }else{
-    return 'reprovado';
-  }
+  if(nota2 < nota1) menor = nota2;
+  return menor;
 }
 
 /*

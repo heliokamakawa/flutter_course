@@ -56,7 +56,7 @@ Definir tudo em uma única função pode torná-la difícil de dar manutenção.
 Devemos tomar cuidado com: (1) a quantidade de linhas; (2)a unidade lógica; e (3) na modularização.
 */
 
-void main(List<String> arguments)  { 
+void main()  { 
   print('''
     Escolha uma opção: 
     (1) - verificar aprovação pela média;
