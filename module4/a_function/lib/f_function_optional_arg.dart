@@ -20,11 +20,18 @@ void main(List<String> arguments) {
 
   /*
   na chamada da função verificarAprovacaoComValorPadrao:
-  (1) o parâmetro media é opcinal - repare que ele está circundado com []
-  (2) quando não informamos o valor padrão é 6 - conforme definido na função
+  (1) o parâmetro mediaAprovacao é opcinal - repare que ele está circundado com []
+  (2) quando não informamos o valor padrão é 6 - conforme definido na declaração
   (3) se necessário, pode-se informar uma outra média
   */      
-  valor = verificarAprovacaoComValorPadrao(nota1, nota2);   
+  valor = verificarAprovacaoComMediaPadrao(nota1, nota2);   
+  print(valor);  
+
+  /*
+  nesta chamada da função verificarAprovacaoComMediaPadrao
+  definimos mediaAprovacao para 7
+  */
+  valor = verificarAprovacaoComMediaPadrao(nota1, nota2, 7);   
   print(valor);                                           
 }
 
@@ -40,11 +47,50 @@ String verificarAprovacao(double nota1, double nota2, double media){
 }
 
 /*
-parâmetro com valor padrão
-Para tornar o parâmetro opcional, utilizamos "[]"
-Assim, pode-se definir um valor padrão, atribuindo um valor
+O Dart tem dois tipos de parâmetros: posicionais e nomeados.
+O parâmetros posicionais são os que comumente utilizamos.
+Por padrão, na chamada da função os parâmetros posicionais são obrigatórios.
+Porém, podemos torar os parâmetros posicionais opcionais. 
+Para tornar o parâmetro opcional, deve-se definir o valor padrão e circundar a declaração com "[]"
+IMPORTANTE: Parâmetros opcionais só podem ser declarados após quaisquer parâmetros obrigatórios.
+Visto que, definir antes dos parâmetros obrigatórios, impede a identificação dos valores na chamada da função.
 */
-String verificarAprovacaoComValorPadrao(double nota1, double nota2, [double media=6]){
+String verificarAprovacaoComMediaPadrao(double nota1, double nota2, [double mediaAprovacao=6]){
+  /*
+  Nesta função, o parâmetro posicional mediaAprovacao é opcional
+  na chamada da desta função:
+  - podemos passar o valor que desejamos da mediaAprovacao 
+  - porém, se a mediaAprovacao não for informada, o valor, por padrão será 6
+  */
+  double media =  (nota1 + nota2) / 2;
+  if(media >= mediaAprovacao){
+    return 'aprovado';
+  }else{
+    return 'reprovado';
+  }
+}
+
+//Podemos declarar vários parâmetros opcionais
+String verificarAprovacaoComValorPadrao(double nota1, double nota2, int percetualPresenca, [double mediaAprovacao=6, int percetualMinimaPresenca=75]){
+  /*
+  Nesta função, temos 2 parâmetros posicionais opcionais: mediaAprovacao e percetualMinimaPresenca
+  na chamada da desta função:
+  - podemos passar o valor que desejamos da média 
+  - porém, se a media não for informada, o valor, por padrão será 6
+  */
+  double media =  (nota1 + nota2) / 2;
+  if(media >= mediaAprovacao && percetualPresenca >= percetualMinimaPresenca){
+    return 'aprovado';
+  }else{
+    return 'reprovado';
+  }
+}
+
+/* 
+>>>Declaração ERRADA<<<
+estamos definindo um parâmetro opcional antes dos parâmetros obrigatórios
+
+String verificarAprovacaoComValorPadrao([double media=6], double nota1, double nota2){
   double nota =  (nota1 + nota2) / 2;
   if(nota > media){
     return 'aprovado';
@@ -52,4 +98,16 @@ String verificarAprovacaoComValorPadrao(double nota1, double nota2, [double medi
     return 'reprovado';
   }
 }
+
+>>>Declaração ERRADA<<<
+estamos definindo um parâmetro opcional antes dos parâmetros obrigatórios
+String verificarAprovacaoComValorPadrao(double nota1, [double media=6], double nota2){
+  double nota =  (nota1 + nota2) / 2;
+  if(nota > media){
+    return 'aprovado';
+  }else{
+    return 'reprovado';
+  }
+}
+*/
 

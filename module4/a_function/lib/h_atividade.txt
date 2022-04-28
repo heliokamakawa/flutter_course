@@ -11,16 +11,16 @@ Elabore:
 2) Duas funções sem retorno e com parâmetro; 
 3) Duas funções com retorno e sem parâmetro;  
 4) Duas funções com retorno e com parâmetro;
-5) Duas funções com parâmetros opcionais (valor padrão);
+5) Duas funções com parâmetros posicionais opcionais (valor padrão);
 6) Uma função com parâmetros nomeados obrigatórios;
 7) Uma função com parâmetros nomeados opcionais;
 8) Uma função com parâmetros nomeados obrigatórios e opcionais;
-9) Uma única função com parâmetros nomeados e anônimos;
+9) Uma única função com parâmetros nomeados e posicionais;
 
 Exercício III
 1) Em que caso os parâmetros nomeados são úteis? 
 2) Por padrão os parâmetros nomeados são opcionais ou obrigatórios? Caso sejam opcionais, como torná-los obrigatórios?
 3) Qual a sintaxe para fazer a chamada de uma função com os parâmetros nomeados? 
-4) É possível definir uma única função com parâmetros nomeados e anônimos?
+4) É possível definir uma única função com parâmetros nomeados e posicionais?
 5) Quais são as vantagens em utilizar parâmetros nomeados? 
-6) Quais são as diferenças entre parâmetros nomeados e anônimos?
+6) Quais são as diferenças entre parâmetros nomeados e posicionais?
