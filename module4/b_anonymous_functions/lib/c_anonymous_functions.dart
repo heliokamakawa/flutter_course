@@ -24,13 +24,13 @@ void main(List<String> arguments) {
   double n1 = double.parse(stdin.readLineSync()!);
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-  var resultado = '';
+  bool aprovado;
   if(escolha == 1){
     //definindo ação com função nomeada - uma ação que previamente era conhecido
-    resultado = verificarAprovacao(n1, n2, aprovacaoMedia); 
+    aprovado = verificarAprovacao(n1, n2, calcularMedia); 
   }else if(escolha == 2){
     //refazendo a função nomeada verificarMaiorNota em função anônima - somente para comparar e entender a sintaxe
-    resultado = verificarAprovacao(n1, n2, (double nota1, double nota2){ 
+    aprovado = verificarAprovacao(n1, n2, (double nota1, double nota2){ 
       double maior = nota1;
       if(nota2 > nota1) maior = nota2;
       return maior;
@@ -43,41 +43,36 @@ void main(List<String> arguments) {
     Neste caso estamos verificando a aprovação com peso.
     Com a definição de um parâmetro de função, damos a liberdade de definir qualquer ação não prevista.
     */
-    resultado = verificarAprovacao(n1, n2, (){ 
+    aprovado = verificarAprovacao(n1, n2, (){ 
       n1 = n1 * 2; // nota1 tem peso 2
       double media = (n1 + n2) / 3;
       return media;
     });
   }
-  print(resultado);
+  print( aprovado ? 'aprovado' : 'reprovado' );
 }
 
-String verificarAprovacao(double nota1, double nota2, Function acao){
-    double nota = acao(nota1,nota2);
-    if(nota >= 6){
-      return 'aprovado';
-    }else{
-      return 'reprovado';
-    }
+bool verificarAprovacao(double nota1, double nota2, Function caclularNota){
+    double nota = caclularNota(nota1,nota2);
+    return (nota >= 6);
 }
 
-double aprovacaoMedia(double nota1, double nota2){
+double calcularMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
   return media;
 }
 
-double aprovacaoMaiorNota(double nota1, double nota2){
+double calcularMaiorNota(double nota1, double nota2){
   double maior = nota1;
   if(nota2 > nota1) maior = nota2;
   return maior;
 }
 
-double aprovacaoMenorNota(double nota1, double nota2){
+double calcularMenorNota(double nota1, double nota2){
   double menor = nota1;
   if(nota2 < nota1) menor = nota2;
   return menor;
 }
-
 
 /*
 Atividade I 

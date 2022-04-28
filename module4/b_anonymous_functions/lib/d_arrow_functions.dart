@@ -31,24 +31,20 @@ void main(List<String> arguments) {
   double n1 = double.parse(stdin.readLineSync()!);
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-  var resultado = '';
+  bool aprovado;
   if(escolha == 1){
-    resultado = verificarAprovacao(n1, n2, () => ( (n1 + n2) / 2) );        //exemplo arrow function
+    aprovado = verificarAprovacao(n1, n2, () => ( (n1 + n2) / 2) );        //exemplo arrow function
   }else if(escolha == 2){
-    resultado = verificarAprovacao(n1, n2, () => ( (n1 > n2) ? n2 : n1)  ); //exemplo arrow function
+    aprovado = verificarAprovacao(n1, n2, () => ( (n1 > n2) ? n2 : n1)  ); //exemplo arrow function
   } else {
-    resultado = verificarAprovacao(n1, n2, () => ( (n1 < n2) ? n2 : n1) );  //exemplo arrow function
+    aprovado = verificarAprovacao(n1, n2, () => ( (n1 < n2) ? n2 : n1) );  //exemplo arrow function
   }
-  print(resultado);
+  print( aprovado ? 'aprovado' : 'reprovado' );
 }
 
-String verificarAprovacao(double nota1, double nota2, Function acao){
-    double nota = acao(nota1,nota2);
-    if(nota >= 6){
-      return 'aprovado';
-    }else{
-      return 'reprovado';
-    }
+bool verificarAprovacao(double nota1, double nota2, Function caclularNota){
+    double nota = caclularNota(nota1,nota2);
+    return (nota >= 6);
 }
 
 /*

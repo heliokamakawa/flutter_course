@@ -34,10 +34,6 @@ void adicionarSalario(double salario, double valor, Function(double valor) valid
 }
 
 bool ePositivo(int numero){
-  if(numero > 0){
-    return true;
-  }else{
-    return false;
-  }
+  return (numero > 0);
 }
 

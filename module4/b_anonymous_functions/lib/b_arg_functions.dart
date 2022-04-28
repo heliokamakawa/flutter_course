@@ -25,38 +25,34 @@ void main(List<String> arguments) {
   double n1 = double.parse(stdin.readLineSync()!);
   print('Informe a 2º nota:');
   double n2 = double.parse(stdin.readLineSync()!);
-  var resultado = '';
+  bool aprovado;
   if(escolha == 1){
-    resultado = verificarAprovacao(n1, n2, aprovacaoMedia); //definindo a ação "aprovacaoMedia" na chamada da função verificarAprovacao
+    aprovado = verificarAprovacao(n1, n2, calcularMedia); //definindo a ação "aprovacaoMedia" na chamada da função verificarAprovacao
   }else if(escolha == 2){
-    resultado = verificarAprovacao(n1, n2, aprovacaoMaiorNota); //definindo a ação "aprovacaoMaiorNota" na chamada da função verificarAprovacao
+    aprovado = verificarAprovacao(n1, n2, calcularMaiorNota); //definindo a ação "aprovacaoMaiorNota" na chamada da função verificarAprovacao
   } else {
-    resultado = verificarAprovacao(n1, n2, aprovacaoMenorNota); //definindo a ação "aprovacaoMenorNota" na chamada da função verificarAprovacao
+    aprovado = verificarAprovacao(n1, n2, calcularMenorNota); //definindo a ação "aprovacaoMenorNota" na chamada da função verificarAprovacao
   }
-  print(resultado);
+  print( aprovado ? 'aprovado' : 'reprovado' );
 }
 
-String verificarAprovacao(double nota1, double nota2, Function acao){
-    double nota = acao(nota1,nota2);
-    if(nota >= 6){
-      return 'aprovado';
-    }else{
-      return 'reprovado';
-    }
+bool verificarAprovacao(double nota1, double nota2, Function caclularNota){
+    double nota = caclularNota(nota1,nota2);
+    return (nota >= 6);
 }
 
-double aprovacaoMedia(double nota1, double nota2){
+double calcularMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
   return media;
 }
 
-double aprovacaoMaiorNota(double nota1, double nota2){
+double calcularMaiorNota(double nota1, double nota2){
   double maior = nota1;
   if(nota2 > nota1) maior = nota2;
   return maior;
 }
 
-double aprovacaoMenorNota(double nota1, double nota2){
+double calcularMenorNota(double nota1, double nota2){
   double menor = nota1;
   if(nota2 < nota1) menor = nota2;
   return menor;
