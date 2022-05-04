@@ -23,7 +23,6 @@ void main(List<String> arguments) {
   print('O aluno está ${verificarAprovacao(nota1, nota2)}'); 
 }
 
-
 //definindo uma função com retorno e com parâmetro
 String verificarAprovacao(double nota1, double nota2){
   double media =  (nota1 + nota2) / 2;

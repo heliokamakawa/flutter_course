@@ -49,8 +49,6 @@ String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
       }
     }
 }
-
-
 /*
 Definir tudo em uma única função pode torná-la difícil de dar manutenção.
 Devemos tomar cuidado com: (1) a quantidade de linhas; (2)a unidade lógica; e (3) na modularização.
@@ -73,15 +71,15 @@ void main()  {
 
 String verificarAprovacao(int escolha, double nota1, double nota2){
   if(escolha == 1){
-      return  aprovacaoMedia(nota1, nota2);
+      return  calcularMedia(nota1, nota2);
     }else if(escolha == 2){
-      return aprovacaoMaiorNota(nota1, nota2);
+      return calcularMedia(nota1, nota2);
     } else {
-      return aprovacaoMenorNota(nota1, nota2);
+      return calcularMaiorNota(nota1, nota2);
     }
 }
 
-String aprovacaoMedia(double nota1, double nota2){
+String calcularMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
   if(media >= 6){
     return 'aprovado';
@@ -90,7 +88,7 @@ String aprovacaoMedia(double nota1, double nota2){
   }
 }
 
-String aprovacaoMaiorNota(double nota1, double nota2){
+String calcularMaiorNota(double nota1, double nota2){
   double maior = nota1;
   if(nota2 > nota1){
     maior = nota2;
@@ -102,7 +100,7 @@ String aprovacaoMaiorNota(double nota1, double nota2){
   }
 }
 
-String aprovacaoMenorNota(double nota1, double nota2){
+String calcularMenorNota(double nota1, double nota2){
   double menor = nota1;
   if(nota2 < nota1){
     menor = nota2;

@@ -14,7 +14,6 @@ void main(List<String> arguments) {
   print('O aluno está ${verificarAprovacao()}'); 
 }
 
-
 //definindo uma função com retorno e com parâmetro
 String verificarAprovacao(){
   //coletando dados

@@ -36,8 +36,8 @@ void main(List<String> arguments) {
   print( aprovado ? 'aprovado' : 'reprovado' );
 }
 
-bool verificarAprovacao(double nota1, double nota2, Function caclularNota){
-    double nota = caclularNota(nota1,nota2);
+bool verificarAprovacao(double nota1, double nota2, Function definirNota){
+    double nota = definirNota(nota1,nota2);
     return (nota >= 6);
 }
 

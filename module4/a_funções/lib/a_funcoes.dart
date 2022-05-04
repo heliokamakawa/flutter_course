@@ -5,7 +5,11 @@ void main(List<String> arguments) {
   (2) habilitar Cude Runner: Run in Terminal; e 
   (3) selecionar a função main no arquivo dart_function.dart e clicar em Run Code
   ''');
-  /*
+  
+  print('*** Exemplos de funções ***'); 
+}
+
+/*
 
   ** O que é Função?
   É um conunto de comandos que realiza uma tarefa específica.
@@ -47,6 +51,4 @@ void main(List<String> arguments) {
   uma função da biblioteca - não definimos
   é um top level function - chamamos sem a necessidade de criar um objeto 
   */
-  print('*** Exemplos de funções ***'); 
-}
 

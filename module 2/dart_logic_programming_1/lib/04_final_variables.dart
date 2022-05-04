@@ -16,16 +16,13 @@ void main(List<String> arguments) {
     final int num2 = 4; 
     const int resultado = num1 * num2; >>> gera ERRO → resultado é uma constante (definido em tempo de compilação), mas a atribuição depende de num2 que é definido em tempo de execução (final)
   */
-
   const String nomeProduto = 'Prestígio';
   final String descricaoProduto = 'chocolate';
 
   /*
-  
   const var nomeProduto = 'Prestígio';        >>>> ERADO → para declarar const não existe VAR
   final var descricaoProduto = 'chocolate';   >>>> ERADO → para declarar final não existe VAR
   */
-
   //definindo const/final com inferência de valor
   const nomeProduto2 = 'Chokito';
   final descricaoProduto2 = 'doce';
