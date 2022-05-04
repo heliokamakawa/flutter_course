@@ -14,8 +14,6 @@ String show(){
 Esta função tem o objetivo de verificar a aprovação pela nota e presença 
 Considerando este cenário, quais são os possíveis contextos de teste? 
 Para cada cenário, os resultados gerados estão coerentes? 
-Faça a depuração e indique até onde a nota está correta.
-Faça a depuração e indique até onde a presença está correta.
-Faça as alterações necessárias.
+Registros os erros encontrados e faça as alterações necessárias.
 */
 
