@@ -1,5 +1,5 @@
-import 'package:c_depuracao/ver_aprovacao/calculo_nota.dart' as nota;
-import 'package:c_depuracao/ver_aprovacao/calculo_presenca.dart' as presenca;
+import 'calculo_nota.dart' as nota;
+import 'calculo_presenca.dart' as presenca;
 
 String verificarAprovacao(double nota1, double nota2, double media, int quantidadePresenca, int cargaHorariaDisciplina, double percentualMinimoPresenca){
   var aprovadoNota = verificarAprovacaoNota(nota1, nota2);

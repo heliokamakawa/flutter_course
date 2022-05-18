@@ -50,7 +50,7 @@ Em caso de um trecho de código retornar uma expressão - valor sem a definiçã
 podemos inserir a expressão na Janela de Inspeção (Watch)
 */
 
-void show(){
+void main(){
   var escolha = 1;
   var n1 = 7.0;
   var n2 = 8.0;

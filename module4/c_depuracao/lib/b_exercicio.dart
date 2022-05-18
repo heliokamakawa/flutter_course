@@ -1,4 +1,4 @@
-import 'package:c_depuracao/ver_aprovacao/verificar_aprovacao.dart' as aprovacao;
+import 'ver_aprovacao/verificar_aprovacao.dart' as aprovacao;
 
 String show(){
   var nota1 = 7.0;
