@@ -67,3 +67,55 @@ void validarNota({required double nota1,required double nota2,double limiteNota 
     throw Exception('A nota1 deverá ser de 0 a 10.');
   }
 }
+
+/*
+TESTE UNIDADE
+Testa uma única função, método ou classe;
+- O objetivo é verificar a exatidão de uma unidade de lógica sob uma variedade de condições;
+- As dependências externas da unidade em teste geralmente são simuladas;
+- Os testes de unidade geralmente não lêem ou gravam no disco, 
+renderizam na tela ou recebem ações do usuário de fora do processo que executa o teste;
+- Para obter mais informações sobre testes de unidade, podemos executar "dart test –help" em seu terminal.
+
+FIRST
+Fast: Os testes devem rodar rápido;
+Independent: Não deve existir dependência entre os testes, eles devem poder ser executados de forma isolada;
+Repeatable: O resultado deve ser o mesmo, independente da quantidade de vezes que seja executado;
+Self-validating: O próprio teste deve ter uma saída bem definida que é válida ou não fazendo com que ele passe ou falhe.
+Timely: Os testes devem ser escritos antes do código-fonte (Teste-Drien Development)
+
+Flutter.dev
+https://docs.flutter.dev/cookbook/testing/unit/introduction
+
+Pub.dev
+https://pub.dev/packages/test
+
+
+Teste de Unidade em Dart/Flutter
+- Adicione a dependência test ou .flutter_test
+- Crie um arquivo de teste.
+- Crie uma classe/função para testar.
+- Escreva um test para a classe/função.
+- Execute os testes. 
+    1-run code ide; 
+    2-run em cima da função; ou 
+    3-terminal dart .\test\pacote\arquivo_teste.dart
+
+sintaxe: 
+test('descrição', () {
+  expect(chamada da função, resultado esperdado);
+});
+
+>>>teste de exceção
+test('descrição', () {
+  expect(() => chamada da função, throwsException);
+});
+
+>>>agrupando testes
+group('teste cálculo média', (){
+
+}
+
+- Combine vários testes em um arquivo com o group.
+- Execute todos os testes - vários arquivos. (run - dart test)
+*/
