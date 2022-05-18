@@ -64,7 +64,7 @@ void validarNota({required double nota1,required double nota2,double limiteNota 
     throw Exception('A nota1 deverá ser de 0 a 10.');
   }
   if(nota2 < notaMinima || limiteNota > 10){
-    throw Exception('A nota1 deverá ser de 0 a 10.');
+    throw Exception('A nota2 deverá ser de 0 a 10.');
   }
 }
 
