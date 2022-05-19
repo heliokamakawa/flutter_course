@@ -1,5 +1,5 @@
 Exercício I
-Para cada variante de função que estudamos elaborar a seguinte função:
+Em relação ao conteúdo estudado, aplique-as na:
 → função calularSalario - precisa do (i) valor salario e o (ii) valor do desconto. Fazer o desconto somente se haver saldo. No final informar o saldo.
 
 Exercício II
@@ -7,15 +7,11 @@ Pensar em um projeto único - quanto maior o escopo melhor - possibilita pensar 
 Elabroar funções no escopo do projeto (autêntico)
 Fazer comentários de tudo que entendeu
 Elabore: 
-1) Duas funções sem retorno e sem parâmetro; 
-2) Duas funções sem retorno e com parâmetro; 
-3) Duas funções com retorno e sem parâmetro;  
-4) Duas funções com retorno e com parâmetro;
-5) Duas funções com parâmetros posicionais opcionais (valor padrão);
-6) Uma função com parâmetros nomeados obrigatórios;
-7) Uma função com parâmetros nomeados opcionais;
-8) Uma função com parâmetros nomeados obrigatórios e opcionais;
-9) Uma única função com parâmetros nomeados e posicionais;
+1) Duas funções com parâmetros posicionais opcionais (valor padrão);
+2) Uma função com parâmetros nomeados obrigatórios;
+3) Uma função com parâmetros nomeados opcionais;
+4) Uma função com parâmetros nomeados obrigatórios e opcionais;
+5) Uma única função com parâmetros nomeados e posicionais;
 
 Exercício III
 1) Em que caso os parâmetros nomeados são úteis? 
