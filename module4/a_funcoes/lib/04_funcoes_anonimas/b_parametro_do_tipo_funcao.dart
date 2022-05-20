@@ -2,15 +2,18 @@ import 'dart:io';
 
 /*
 >>> Parâmetros do tipo função <<<
+Nesta parte da aula é importante que você entenda: O que são, para que servem  e quando pode-se definir uma Function Parameters (parâmetros do tipo função).
+
 Agora que entendemos o contexto aplicável, vamos para o próximo passo, Function Parameters. 
-No contexto em que preciamos de ações dinâmicas para realizar uma função, podemos definir um parâmetro do tipo função.
-Assim, pode-se definir a ação no momento da chamda da função.
+Qaundo? No contexto em que sabemos "o que" (objetivo), mas não sabemos "como" (implementação).
+Exemplo: 
+   A função verificarAprovação precisa de uma nota. 
+   Para isso sabemos "o que", que no caso é calcular nota.
+   Porém, não sabemos exatamente "como", visto que, cada professor pode fazer de uma forma.
+
+Neste contexto, pode-se definir um parâmetro do tipo de função para a função verificarAprovação.
 
 Neste arquivo, vamos definir uma ação com a chamada de uma função nomeada.
-
-Nesta parte da aula é importante que você entenda:
-→ O que são e para que servem Function Parameters (parâmetros do tipo função).
-→ O que são, para que servem e quando utilizamos Funções Nomeadas.
 */
 
 void main(List<String> arguments) {
