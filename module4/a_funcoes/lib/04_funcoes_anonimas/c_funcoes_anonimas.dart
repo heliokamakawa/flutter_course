@@ -1,15 +1,25 @@
 import 'dart:io';
 /*
 >>> Anonymous Function - Funções Anônimas <<<
-O que é? Funções sem nome.
-Sintaxe? A mesma de uma função comum, porém sem o nome e sem a definição explícita do tipo de retorno.
-Quando utilizamos? Geralmente para definir uma ação previamente desconhecida.
-Vantagem? Permite adiar a definição de uma ação.
-Pré-requisito? Necessário ter o parâmetro do tipo função.
-
 Nesta parte da aula é importante que você entenda:
-→ A diferença entre funções nomeadas e anônimas. 
+→ A diferença entre funções nomeadas e anônimas. Além da sintaxe, o importante é aprender o contexto aplicável.
 → O que é, sintaxe, quando utilizamos, vantagens e o que é necessário para trabalhar com Funções Anônimas.
+
+O que é? 
+  Funções sem nome. 
+  Como não tem nome, não pode ser chamada.
+  Não pode ser executada em mais de um ponto.
+  Não pode ser reaproveitada.
+Sintaxe? 
+  A mesma de uma função comum, porém sem o nome e sem a definição explícita do tipo de retorno.
+Quando utilizamos? 
+  Geralmente para definir uma ação previamente desconhecida que não precisa ser reaproveitada.
+  Com a sintaxe mais enxuta, é mais rápido e fácil de implementar.
+  Conforme o contexto, ajuda na legibilidade do código.
+Pré-requisito? 
+  Necessário ter uma função com o parâmetro do tipo função.
+Cuidado!!!
+  Conforme a implementação pode comprometer a legibilidade.
 */
 
 void main(List<String> arguments) {
