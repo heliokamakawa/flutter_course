@@ -6,13 +6,13 @@ Antes de aprender a respeito de funções anônimas,
 é importante entender onde e quando podemos utilizar este recurso
 
 Funções Anônimas são úteis em circunstâncias em que é necessário uma função 
-que precisa de dados (variáveis/dinâmicos) e ações (variável/dinâmico) para realizar a função
+que precisa de dados (variáveis/dinâmicos) e ações (variável/dinâmico) para alcançar o seu objetivo.
 
 Exemplo:
 Um contexto em que precisamos de uma função para verificar a aprovação mediante 2 notas. 
-Porém, é muito comum que haja situações em que cada professor tem uma forma de considerar a aprovação.
+Considere a situação em que cada professor tem uma forma de considerar a nota de aprovação.
 
-Por exemplo, vamos elaborar uma função que verifica a aprovação em 3 situações:
+Por exemplo, professores podem considerar:
 → pela media
 → pela maior nota
 → pela menor nota
@@ -50,8 +50,8 @@ String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
     }
 }
 /*
-Definir tudo em uma única função pode torná-la difícil de dar manutenção.
-Devemos tomar cuidado com: (1) a quantidade de linhas; (2)a unidade lógica; e (3) na modularização.
+Definir tudo em uma única função pode torná-la complexa,difícil de entender e dar manutenção.
+Devemos tomar cuidado com: (1) a quantidade de linhas; (2) a unidade lógica; e (3) na modularização.
 */
 
 void main()  { 
@@ -70,7 +70,7 @@ void main()  {
 }
 
 String verificarAprovacao(int escolha, double nota1, double nota2){
-  if(escolha == 1){
+  if(escolha == 1){ // desta forma soluciona um contexto predefinido/preconhecido... e se haver outras formas não conhecidas?
       return  calcularMedia(nota1, nota2);
     }else if(escolha == 2){
       return calcularMedia(nota1, nota2);
