@@ -2,21 +2,29 @@ import 'dart:io';
 
 /*
 >>> Arrow Function <<<
-Arrow - significa seta (=>)
-Function - significa função
-O que é? É uma função anônima com um único comando.
-Objetivo? Reduzir a sintaxe e faciliar a escrita.
-Sintaxe? A mesma de uma função anônima, porém como só tem um único comando não precisa sinalizar: 
-(1) o final do comando ";".
-(2) o bloco de comando da função "{}".
-(3) o retorno "return".
-Exemplo: (funão que retorna a soma)
-() => x + y   >>>veja que não tem ";", "{}" e "return"
-Vantagem? Como a sintaxe é reduzido, pode-se definir em uma única linha.
-Pré-requisito? Prática para acostumar com a sintaxe.
-
+  Arrow - significa seta (=>) 
+  Function - significa função
+  
 Nesta parte da aula é importante que você entenda:
-→ O que é, sintaxe, quando utilizamos, vantagens e o que é necessário para trabalhar com Arrow Function.
+  O que é, sintaxe, quando utilizamos, vantagens, cuidados e o que é necessário para trabalhar com Arrow Function.
+O que é? 
+  É uma função anônima com um único comando.
+Objetivo? 
+  Reduzir a sintaxe e faciliar a escrita.
+Sintaxe? A mesma de uma função anônima, porém como só tem um único comando não precisa sinalizar o: 
+  (1) Final do comando ";".
+  (2) Bloco de comando da função "{}".
+  (3) Retorno "return".
+Exemplo: (função que retorna a soma)
+  () => x + y   
+  >>>veja que não tem ";", "{}" e "return"
+Vantagem?
+  Como a sintaxe é reduzida, pode-se definir em uma única linha.
+  Conforme a implementação ajuda na legibilidade do código.
+Pré-requisito? 
+  Prática para acostumar com a sintaxe.
+Cuidado!!!
+  Conforme a implementação pode comprometer a legibilidade.
 */
 
 void main(List<String> arguments) {
