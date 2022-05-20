@@ -12,7 +12,7 @@ Exemplo:
    Porém, não sabemos exatamente "como", visto que, cada professor pode fazer de uma forma.
 
 Neste contexto, pode-se definir um parâmetro do tipo de função para a função verificarAprovação.
-
+Vantagem? Permite adiar a definição de uma ação.
 Neste arquivo, vamos definir uma ação com a chamada de uma função nomeada.
 */
 
