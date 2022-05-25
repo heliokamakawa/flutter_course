@@ -47,9 +47,9 @@ void main(List<String> arguments) {
     });
   } else {
     /*
-    Definindo uma ação dinâmica - previamente desconhecido - verificar aprovação com peso
+    Definindo uma ação dinâmica verificar aprovação com peso
     aqui pode-se notar a vantagem de definir uma parâmetro do tipo função.
-    Pois, na chamada de verificarAprovação, podemos definir uma ação que antes não era conhecido.
+    Pois, na chamada de verificarAprovação, podemos definir uma ação que antes não era conhecida.
     Neste caso estamos verificando a aprovação com peso.
     Com a definição de um parâmetro de função, damos a liberdade de definir qualquer ação não prevista.
     */
