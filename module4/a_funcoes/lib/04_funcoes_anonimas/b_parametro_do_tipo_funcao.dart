@@ -5,17 +5,24 @@ import 'dart:io';
 Nesta parte da aula é importante que você entenda: O que são, para que servem  e quando pode-se definir uma Function Parameters (parâmetros do tipo função).
 
 Agora que entendemos o contexto aplicável, vamos para o próximo passo, Function Parameters. 
-Qaundo? No contexto em que sabemos "o que" (objetivo), mas não sabemos "como" (implementação).
+Qaundo utilizamos? No contexto em que precisamos de uma ação, sabemos "o que" (objetivo) é precisa fazer, mas não sabemos "como" (implementação).
 Exemplo: 
-   A função verificarAprovação precisa de uma nota. 
-   Para isso sabemos "o que", que no caso é calcular nota.
+   A função verificarAprovação precisa definir uma nota para que seja possível verificar a aprovação. 
+   Sabemos "o que" é preciso ser feito, que no caso é definir nota.
    Porém, não sabemos exatamente "como", visto que, cada professor pode fazer de uma forma.
 
 Neste contexto, pode-se definir um parâmetro do tipo de função para a função verificarAprovação.
 Vantagem? Permite adiar a definição de uma ação.
-Neste arquivo, vamos definir uma ação com a chamada de uma função nomeada.
+Neste arquivo, vamos definir o parâmetro do tipo função e para executar, utilizaremos uma função nomeada.
 */
 
+//definindo uma função que tem um parâmetro do tipo função (definir nota)
+bool verificarAprovacao(double nota1, double nota2, Function definirNota){
+    double nota = definirNota(nota1,nota2);
+    return (nota >= 6);
+}
+
+//função main que coleta dados via terminal e chama a função
 void main(List<String> arguments) {
   print('''
     Escolha uma opção: 
@@ -39,22 +46,20 @@ void main(List<String> arguments) {
   print( aprovado ? 'aprovado' : 'reprovado' );
 }
 
-bool verificarAprovacao(double nota1, double nota2, Function definirNota){
-    double nota = definirNota(nota1,nota2);
-    return (nota >= 6);
-}
-
+//função nomeada que define nota pela média
 double calcularMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
   return media;
 }
 
+//função nomeada que define nota pela maior nota
 double calcularMaiorNota(double nota1, double nota2){
   double maior = nota1;
   if(nota2 > nota1) maior = nota2;
   return maior;
 }
 
+//função nomeada que define nota pela menor nota
 double calcularMenorNota(double nota1, double nota2){
   double menor = nota1;
   if(nota2 < nota1) menor = nota2;
