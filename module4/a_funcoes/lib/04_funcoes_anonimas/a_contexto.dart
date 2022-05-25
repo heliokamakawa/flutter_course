@@ -5,18 +5,20 @@ import 'dart:io';
 Antes de aprender a respeito de funções anônimas,
 é importante entender onde e quando podemos utilizar este recurso
 
-Funções Anônimas são úteis em circunstâncias em que é necessário uma função 
-que precisa de dados (variáveis/dinâmicos) e ações (variável/dinâmico) para alcançar o seu objetivo.
+Um cenário comum em utilizar uma Função Anônima é definindo em uma função "container" que possui um parâmetro do tipo função. 
+Assim, o primeiro passo é entender em que caso é necessário ter uma função com parâmetro do tipo função.
 
 Exemplo:
-Um contexto em que precisamos de uma função para verificar a aprovação mediante 2 notas. 
+Imagine uma função para verificar a aprovação mediante 2 notas. 
 Considere a situação em que cada professor tem uma forma de considerar a nota de aprovação.
 
 Por exemplo, professores podem considerar:
 → pela media
 → pela maior nota
 → pela menor nota
-obs: poderia ter várias outras formas
+
+Na função abaixo conseguimos definir tudo que foi "previsto" antes de deteminar uma função.
+A questão é, se tiver outras formas de definiar a nota "não prevista"?
 */
 
 String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
@@ -50,10 +52,12 @@ String verificarAprovacaoCompleto(int escolha, double nota1, double nota2){
     }
 }
 /*
-Definir tudo em uma única função pode torná-la complexa,difícil de entender e dar manutenção.
+Antes de mais nada, vamos organizar o nosso código.
+Definir tudo em uma única função pode torná-la complexa, difícil de entender e dar manutenção.
 Devemos tomar cuidado com: (1) a quantidade de linhas; (2) a unidade lógica; e (3) na modularização.
 */
 
+// função de interface para o terminal
 void main()  { 
   print('''
     Escolha uma opção: 
@@ -69,16 +73,18 @@ void main()  {
   print(verificarAprovacao(escolha, n1, n2));
 }
 
+//função que verifica aprovação
 String verificarAprovacao(int escolha, double nota1, double nota2){
-  if(escolha == 1){ // desta forma soluciona um contexto predefinido/preconhecido... e se haver outras formas não conhecidas?
+  if(escolha == 1){ 
       return  calcularMedia(nota1, nota2);
     }else if(escolha == 2){
       return calcularMedia(nota1, nota2);
     } else {
       return calcularMaiorNota(nota1, nota2);
     }
-}
+}//  >>>>>desta forma soluciona um contexto predefinido/preconhecido... e se haver outras formas não conhecidas?
 
+//função que definie a nota pela média
 String calcularMedia(double nota1, double nota2){
   double media = (nota1 + nota2) / 2;
   if(media >= 6){
@@ -88,6 +94,7 @@ String calcularMedia(double nota1, double nota2){
   }
 }
 
+//função que define a nota pela maior nota
 String calcularMaiorNota(double nota1, double nota2){
   double maior = nota1;
   if(nota2 > nota1){
@@ -100,6 +107,7 @@ String calcularMaiorNota(double nota1, double nota2){
   }
 }
 
+//função que define a nota pela menor nota
 String calcularMenorNota(double nota1, double nota2){
   double menor = nota1;
   if(nota2 < nota1){
@@ -112,8 +120,14 @@ String calcularMenorNota(double nota1, double nota2){
   }
 }
 
-
 /*
+Veja que apesar de termos organizado o código, continuamos com o problema
+E se tiver outras formas de calcular nota não previstas? 
+A função verificarAprovacao precisa de dados (nota1 e nota2) e também de um ação (definir nota) para realziar sua tarefa!!!!
+As notas são os dados que comumente utilziamos e definmos como parâmetros na função...
+Agora, definir nota não é um parâmetro de dado e sim de AÇÃO! Ou seja, é um parâmetro do TIPO FUNÇÃO!
+Veja a solução no próximo arquivo!
+
 Atividade I
 Conseguiu entender o contexto? Explique.
 
