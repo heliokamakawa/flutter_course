@@ -10,7 +10,7 @@
   */
 
 void main(List<String> arguments) {
-  print('sample type variables');
+  print('sample type variables in Dart');
   //definindo variáveis
   String nomeProduto = 'Prestígio';                 //conjunto de caracteres
   String descricaoProduto = 'chocolate';            //conjunto de caracteres
