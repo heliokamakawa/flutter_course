@@ -4,7 +4,7 @@
   Um valor que pode "variar", hora é um valor, hora é outro - é por isto que chamamos de variável.
   
   Sintaxe para definir uma variável com tipo explícito: 
-  tipo nome_variável = atribuição;
+  tipo nome_variável = valor; // = representa atribuição
   
   Tipos existentes: String (conjunto de caracteres), char (caractere), double (números com casas decimais), int (números inteiros), bool (valor booleano)
   */
