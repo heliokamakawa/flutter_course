@@ -12,8 +12,8 @@ void main(List<String> arguments) {
     compramos $quantidadeProduto unidades''');
 
 
-  /*
-  Por qual motivo utilizamos a inferência de tipo? 
+  
+  //Por qual motivo utilizamos a inferência de tipo? 
   String meuNome = 'Paulo'; 
   // veja que, quando declaramos uma variável com atribuição, é possível deduzir o tipo pela atribuição
   // se estamos atribuindo 'Paulo', estamos atribuindo um tipo String 
@@ -24,16 +24,16 @@ void main(List<String> arguments) {
 
   // um detalhe é que, meuNome, após a atribuição, se torma uma variável do tipo String
   // após a definição de um tipo, não é possível mudar. 
-  var meuNome = 'Paulo'; → na atribuição meuNome vira uma String
-  meuNome = 50; >>>> gera erro, visto que estamos atribuindo um inteiro em meuNome que é uma String
-  */
+  var meuNome = 'Paulo'; // → na atribuição meuNome vira uma String
+  meuNome = 50; // >>>> gera erro, visto que estamos atribuindo um inteiro em meuNome que é uma String
+  
 
 
   /*
-  Quando devemos explicitar um tipo e quando devemos utilizar a inferência de tipo
+  Quando devemos explicitar um tipo e quando devemos utilizar a inferência de tipo?
 
-  Em declarações com atribuição, utilizamos a inferência de tipo
-  String meuNome = 'Paulo'; 
+  Em declarações com atribuição de um tipo explícito e claro, utilizamos a inferência de tipo
+  var meuNome = 'Paulo'; → aqui recomenda-se utilizar a inferência de tipo
 
   Em declarações sem atribuição, em que sabemos o tipo mas não o seu valor (só saberemos depois)
   utilizamos a declaração com o tipo explícito
