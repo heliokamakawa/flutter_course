@@ -1,4 +1,3 @@
-
 import 'package:test/test.dart';
 /* 1) Em que contexto deve-se utilizar uma variável com tipo de inferência e o nomeado? Explique o objetivo da mudança drástica que ocorreu na versão 2.12 do Dart?
 R: Definimos uma variável com inferência de tipo quando há uma atribuição de tipo explícito.  Exemplo: var nome = 'Carlos';
