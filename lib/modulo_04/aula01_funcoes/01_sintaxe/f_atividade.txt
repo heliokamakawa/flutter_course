@@ -1,6 +1,6 @@
 Exercício I
 Para cada variante de função que estudamos elaborar a seguinte função:
-→ função calularSalario - precisa do (i) valor salario e o (ii) valor do desconto. Fazer o desconto somente se haver saldo. No final informar o saldo.
+→ função calularSalario - precisa do (i) valor salario e o (ii) valor do desconto. Permitir o desconto somente se haver saldo. No final informar o saldo.
 
 Exercício II
 Pensar em um projeto único - quanto maior o escopo melhor - possibilita pensar em vários exemplos
