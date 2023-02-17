@@ -12,7 +12,7 @@ void main(List<String> arguments) {
 /*
 
   ** O que é Função?
-  É um conunto de comandos que realiza uma tarefa específica.
+  É um conjunto de comandos que realiza uma tarefa específica.
   A ideia básica de uma função é encapsular/modularizar/concentrar um conjunto de código que pode ser chamado por qualquer outro trecho de código.
   Função representa uma tarefa a ser executada → podemos chamar quantas vezes forem necessárias.
   exemplo de função: main e print
