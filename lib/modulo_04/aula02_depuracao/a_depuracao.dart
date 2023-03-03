@@ -11,7 +11,7 @@ Como fazer a depuração?
 → inicie a depração (F5)
 
 Onde definir a depuração?
-→ Você tem noção do possível local? defina o break point este local.
+→ Você tem noção do possível local? defina o break point neste local.
 → Não sabe o local? defina o break point no início.
 
 Como executar a depuração?
@@ -31,7 +31,7 @@ Quando utilziar SHIFT+F11?
 Executar a depuração de forma mista (cenário 1)
 → Marque o break point no possível local de erro
 → Vá direto até o break point (F5)
-→ Acompanhe as variáveis >>O VALOR É APRESENTADO SEMPRE NA EXECUÇÃO POSTERIR DA LINHA<< 
+→ Acompanhe as variáveis → O VALOR É APRESENTADO SEMPRE NA EXECUÇÃO POSTERIR DA LINHA 
   as variáveis em variables 
   expressões em watch
   funções em call stack
